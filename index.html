@@ -11,7 +11,60 @@
     <title>Webpage</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bartek Jezierski</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" id="projects-tab" data-bs-toggle="tab" href="#projects" role="tab">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="info-tab" data-bs-toggle="tab" href="#info" role="tab">Info</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+          <h2 class="mb-4">Projects</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Far-Right Tracker Europe</h5>
+                  <p class="card-text">Track the rise and influence of far-right political parties across Europe with interactive maps and data visualizations. This project provides up-to-date insights into election results, party profiles, and regional trends.</p>
+                  <a href="https://brjezierski.github.io/far-right-tracker-europe/" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">OPUS-MT: Silesian to Polish Machine Translation</h5>
+                  <p class="card-text">Explore a custom-trained neural machine translation model for translating between Silesian and Polish. This project supports linguistic diversity by making minority language resources more accessible through state-of-the-art NLP tools.</p>
+                  <a href="https://huggingface.co/brjezierski/opus-mt-sla-sla-finetuned-szl-to-pl" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+          <h2 class="mb-4">Info</h2>
+          <div class="card">
+            <div class="card-body">
+              <p class="lead mb-0">My name is Bartek and I am a Data Scientist, particularly interested in the ways we can use data to visualize and better understand current societal and political trends and challenges. My other point of interest is language, in particular the linguistic diversity and how minority languages can be supported by developing natural language processing tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
