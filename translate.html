@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Polish to Silesian neural machine translation demo.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Polish-Silesian Translator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Main page</a>
+        <a class="nav-link" href="index.html#projects">&larr; Back to projects</a>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <h1 class="h3 mb-4">Polish-Silesian Translator</h1>
+
+      <div class="card translator">
+        <div class="card-header bg-body d-flex align-items-center">
+          <span class="flex-fill fw-semibold text-primary">Polish</span>
+          <span class="flex-fill fw-semibold text-end text-md-start ps-md-4">Silesian</span>
+        </div>
+        <div class="row g-0">
+          <div class="col-md-6 border-end-md">
+            <textarea id="source" class="form-control border-0 rounded-0 translator-box" maxlength="500" placeholder="Enter text" aria-label="Text to translate" autofocus></textarea>
+            <div class="text-end text-body-secondary small px-3 pb-2"><span id="count">0</span> / 500</div>
+          </div>
+          <div class="col-md-6 bg-body-tertiary">
+            <div id="output" class="translator-box p-3" aria-live="polite"><span class="text-body-secondary">Translation</span></div>
+            <div class="text-end px-3 pb-2"><button type="button" class="btn btn-sm btn-outline-secondary" id="copyBtn" disabled>Copy</button></div>
+          </div>
+        </div>
+        <div class="card-footer bg-body d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-primary px-4" id="translateBtn">
+            <span class="spinner-border spinner-border-sm d-none" id="spinner" aria-hidden="true"></span>
+            <span id="translateText">Translate</span>
+          </button>
+          <span class="small text-body-secondary" id="status"></span>
+        </div>
+      </div>
+
+      <div class="alert alert-danger mt-3 d-none" id="error" role="alert"></div>
+
+      <p class="small text-body-secondary mt-4">
+        Powered by a <a href="https://huggingface.co/brjezierski/opus-mt-sla-sla-finetuned-pl-to-szl" target="_blank" rel="noopener">fine-tuned OPUS-MT model</a> for Polish&rarr;Silesian, trained on Polish-Silesian Wikipedia. The model runs in your browser, so your text never leaves your device. The first visit downloads about 105&nbsp;MB, which your browser then caches. This is a research demo, so check important translations.
+      </p>
+
+      <section id="more-info" class="mt-5">
+        <h2 class="h5 mb-3">More info</h2>
+        <p>Silesian is a regional language spoken by around half a million people, yet it is poorly supported by existing translation systems. I fine-tuned the multilingual Slavic OPUS-MT model for translating from Polish into Silesian. This demo only offers that direction.</p>
+        <p>The training data comes from Silesian and Polish Wikipedia: I matched articles through shared titles, split them into sentences and aligned them with hunalign, using a Polish-Silesian dictionary of about 21,000 entries scraped from an online Silesian dictionary. The model was then fine-tuned for 10 epochs on roughly 60,000 sentence pairs.</p>
+        <p>I also released a <a href="https://huggingface.co/datasets/brjezierski/benchmark-pl-szl" target="_blank" rel="noopener">100-sentence Silesian-Polish benchmark</a>. On it, the model reaches chrF++ 53&ndash;54.</p>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="js/translate.js"></script>
+  </body>
+</html>

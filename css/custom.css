@@ -1,0 +1,8 @@
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 4.5rem; padding: 2.5rem 0; }
+.project-img { aspect-ratio: 2 / 1; object-fit: cover; }
+.contact-list li { margin-bottom: .75rem; }
+.contact-list a { display: inline-flex; align-items: center; gap: .6rem; }
+.translator-box { min-height: 12rem; resize: none; white-space: pre-wrap; }
+@media (min-width: 768px) { .border-end-md { border-right: 1px solid var(--bs-border-color); } }
+textarea.translator-box { height: 12rem; }
