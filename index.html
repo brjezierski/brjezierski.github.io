@@ -1,80 +1,96 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bartek Jezierski, data scientist. Projects on political data visualization and machine translation for minority languages.">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-mUkCBeyHPdg0tqB6JDd+65Gpw5h/l8DKcCTV2D2UpaMMFd7Jo8A+mDAosaWgFBPl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
 
-    <title>Webpage</title>
+    <title>Bartek Jezierski | Data Scientist</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Bartek Jezierski</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#about">Bartek Jezierski</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" id="projects-tab" data-bs-toggle="tab" href="#projects" role="tab">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="info-tab" data-bs-toggle="tab" href="#info" role="tab">Info</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container mt-4">
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="projects" role="tabpanel" aria-labelledby="projects-tab">
-          <h2 class="mb-4">Projects</h2>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Far-Right Tracker Europe</h5>
-                  <p class="card-text">Track the rise and influence of far-right political parties across Europe with interactive maps and data visualizations. This project provides up-to-date insights into election results, party profiles, and regional trends.</p>
-                  <a href="https://brjezierski.github.io/far-right-tracker-europe/" class="btn btn-primary" target="_blank">View Project</a>
+    <main class="container">
+      <section id="about">
+        <h2 class="mb-4">About</h2>
+        <p class="lead">My name is Bartek and I am a Data Scientist, particularly interested in the ways we can use data to visualize and better understand current societal and political trends. I am also interested in linguistics, in particular the linguistic diversity and how minority languages can be supported by developing natural language processing tools.</p>
+      </section>
+
+      <section id="projects">
+        <h2 class="mb-4">Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100">
+              <img src="img/far-right-tracker.jpg" class="card-img-top project-img" alt="Choropleth map of Europe shaded by far-right party support" loading="lazy">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Far-Right Tracker Europe</h3>
+                <p class="card-text">An interactive map of support for nationalist and far-right parties across Europe. Hover a country to see its parties and current polling, click it for time-series trends and data sources.</p>
+                <p>
+                  <a class="link-primary" data-bs-toggle="collapse" href="#far-right-reflection" role="button" aria-expanded="false" aria-controls="far-right-reflection">Read more</a>
+                </p>
+                <div class="collapse" id="far-right-reflection">
+                  <div class="card card-body mb-3">
+                    <h4 class="h6">Reflection</h4>
+                    <p class="small">One point that hit me when doing this project was the definition of what we consider far right, and why far right is the term that is being thrown around. In answering the second question, based on numerous articles I’ve read, conversations I’ve had and experiences of having lived in places that are some of the hotbeds of the rise of such parties, my conclusion was that it is the right that threatens democracies. In countries classified as hybrid regimes, where the history of stable democratic institutions is limited, far right or right-wing populist parties were largely missing. This flabbergasted me: United Russia with its fascist rhetoric and the Serbian Progressive Party of Vučić, which fosters hateful rhetoric against minorities and bashes the EU, are not labeled as such. Perhaps it is the entrenchment of the political systems in these countries into one-party rule over many years that repositions the center and makes labeling on the far side of the political spectrum unhelpful. Many of the ruling parties in such states are described as big tent, not following a certain ideology but re-aligning based on the geopolitical landscape and the topics important to voters that can gain traction.</p>
+                    <p class="small mb-0">Thus the label far right makes most sense in following current emerging anti-establishment trends in the EU states. Even here we do have exceptions: Poland and Slovakia. In Poland, PiS, worldwide infamous for its attacks on the judiciary and women’s reproductive rights and for its homophobic rhetoric, is often described as far right, yet it has brought forward many policies associated more with the left, like increasing child benefits and reforming the welfare state. In Slovakia, Fico’s Smer identifies itself as left of the political spectrum.</p>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <a href="https://brjezierski.github.io/far-right-tracker-europe/" class="btn btn-primary" target="_blank" rel="noopener">Live site</a>
+                  <a href="https://github.com/brjezierski/far-right-tracker-europe" class="btn btn-outline-secondary" target="_blank" rel="noopener">Source</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">OPUS-MT: Silesian to Polish Machine Translation</h5>
-                  <p class="card-text">Explore a custom-trained neural machine translation model for translating between Silesian and Polish. This project supports linguistic diversity by making minority language resources more accessible through state-of-the-art NLP tools.</p>
-                  <a href="https://huggingface.co/brjezierski/opus-mt-sla-sla-finetuned-szl-to-pl" class="btn btn-primary" target="_blank">View Project</a>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <a href="translate.html"><img src="img/szl-pl-sentences.jpg" class="card-img-top project-img" alt="Alternating Silesian and Polish sentences from the benchmark, set as running text" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title"><a href="translate.html" class="text-decoration-none">Silesian-Polish Translation Models</a></h3>
+                <p class="card-text mb-3">Neural machine translation models for Silesian to Polish and Polish to Silesian, built by fine-tuning the multilingual Slavic OPUS-MT model on Silesian-Polish Wikipedia.</p>
+                <div class="mt-auto">
+                  <a href="translate.html" class="btn btn-primary">Try it</a>
+                  <a href="https://huggingface.co/brjezierski/opus-mt-sla-sla-finetuned-szl-to-pl" class="btn btn-outline-secondary" target="_blank" rel="noopener">Model</a>
+                  <a href="https://huggingface.co/datasets/brjezierski/benchmark-pl-szl" class="btn btn-outline-secondary" target="_blank" rel="noopener">Benchmark dataset</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
-          <h2 class="mb-4">Info</h2>
-          <div class="card">
-            <div class="card-body">
-              <p class="lead mb-0">My name is Bartek and I am a Data Scientist, particularly interested in the ways we can use data to visualize and better understand current societal and political trends and challenges. My other point of interest is language, in particular the linguistic diversity and how minority languages can be supported by developing natural language processing tools.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+      <section id="contact">
+        <h2 class="mb-4">Contact</h2>
+        <ul class="list-unstyled contact-list">
+          <li><a href="https://github.com/brjezierski" target="_blank" rel="noopener"><img src="img/icons/github.svg" alt="" width="24" height="24">GitHub</a></li>
+          <li><a href="https://huggingface.co/brjezierski" target="_blank" rel="noopener"><img src="img/icons/huggingface.svg" alt="" width="24" height="24">Hugging Face</a></li>
+          <li><a href="https://www.linkedin.com/in/brjezierski/" target="_blank" rel="noopener"><img src="img/icons/linkedin.svg" alt="" width="24" height="24">LinkedIn</a></li>
+          <li><a href="mailto:brjezierski@gmail.com"><img src="img/icons/email.svg" alt="" width="24" height="24">brjezierski@gmail.com</a></li>
+        </ul>
+      </section>
+    </main>
 
-    <!-- Option 1: Bootstrap Bundle with Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <footer class="container py-4 text-body-secondary small">
+      &copy; Bartek Jezierski
+    </footer>
 
-    <!-- Option 2: Separate Popper.js and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
